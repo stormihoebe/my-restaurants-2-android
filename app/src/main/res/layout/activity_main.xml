@@ -14,18 +14,6 @@
         android:scaleType="centerCrop"
         android:id="@+id/imageView" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MyRestaurants"
-        android:id="@+id/appNameTextView"
-        android:textColor="@color/colorTextIcons"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:layout_marginTop="7dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,5 +34,17 @@
         android:id="@+id/findRestaurantsButton"
         android:textColor="@color/colorTextIcons"
         android:background="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyRestaurants"
+        android:id="@+id/appNameTextView"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="163dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

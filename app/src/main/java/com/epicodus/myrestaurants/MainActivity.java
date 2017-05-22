@@ -1,25 +1,32 @@
 package com.epicodus.myrestaurants;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
     private Button mFindRestaurantsButton;
     private EditText mLocationEditText;
+    private TextView mAppNameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mLocationEditText = (EditText) findViewById(R.id.locationEditText);
-
         mFindRestaurantsButton = (Button) findViewById(R.id.findRestaurantsButton);
+        mAppNameTextView = (TextView) findViewById(R.id.appNameTextView);
+        Typeface koreancalligraphy = Typeface.createFromAsset(getAssets(), "fonts/koreancalligraphy.ttf");
+        mAppNameTextView.setTypeface(koreancalligraphy);
         mFindRestaurantsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
