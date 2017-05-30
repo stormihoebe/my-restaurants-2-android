@@ -3,7 +3,7 @@ package com.epicodus.myrestaurants;
 import android.os.Build;
 import android.widget.ListView;
 
-import com.epicodus.myrestaurants.ui.RestaurantsActivity;
+import com.epicodus.myrestaurants.ui.RestaurantListActivity;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,20 +20,14 @@ import static junit.framework.Assert.assertTrue;
 @RunWith(RobolectricGradleTestRunner.class)
 
 
-public class RestaurantsActivityTest {
-    private RestaurantsActivity activity;
+public class RestaurantListActivityTest {
+    public RestaurantListActivity activity;
     private ListView mRestaurantListView;
 
     @Before
     public void setup(){
-        activity = Robolectric.setupActivity(RestaurantsActivity.class);
-        mRestaurantListView = (ListView) activity.findViewById(R.id.listView);
+        activity = Robolectric.setupActivity(RestaurantListActivity.class);
     }
 
-    @Test
-    public void restaurantListViewPopulates(){
-        assertNotNull(mRestaurantListView.getAdapter());
-        assertTrue(mRestaurantListView.getAdapter().getCount()>0);
-    }
 
 }
